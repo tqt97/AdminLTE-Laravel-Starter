@@ -10,13 +10,29 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @stack('styles')
     @livewireStyles
+    <style>
+        .nav-sidebar .nav-header {
+            font-size: 1.05rem;
+            /* font-weight: bold; */
+            text-transform: uppercase;
+            color: #000;
+            background-color: #fff;
+            border-left: 4px solid;
+            border-left-color: #009921;
+        }
+
+        .fa-small {
+            font-size: 0.8rem !important;
+        }
+
+    </style>
 </head>
 
 <body
     class="hold-transition sidebar-mini dark-mode1 layout-fixed layout-footer-fixed
             {{-- {{ setting('sidebar_collapse') ? 'sidebar-collapse' : '' }}
             {{ setting('layout-fixed') ? 'layout-fixed' : '' }}
-            {{ setting('layout-footer-fixed') ? 'layout-footer-fixed' : '' }} "--}}
+            {{ setting('layout-footer-fixed') ? 'layout-footer-fixed' : '' }} " --}}
 
             ">
     <div class="wrapper">
@@ -34,6 +50,7 @@
     @stack('js')
     @stack('before-livewire-scripts')
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
     @stack('after-livewire-scripts')
     @stack('alpine-plugins')
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
